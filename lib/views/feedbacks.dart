@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qikpharma/views/shipping.dart';
 
 class Feedbacks extends StatefulWidget {
   const Feedbacks({Key? key}) : super(key: key);
@@ -41,58 +42,66 @@ class _FeedbacksState extends State<Feedbacks> {
             ),
             Padding(
               padding: const EdgeInsets.only(left: 50),
-              child: Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.asset(
-                      "assets/images/pills.png",
-                    ),
-                  ),
-                  Positioned(
-                    top: 30,
-                    left: 20,
-                    right: 50,
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.light_mode,
-                          color: Colors.red,
-                        ),
-                        SizedBox(width: 10),
-                        Text(
-                          "Guidelines",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 17),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Positioned(
-                    top: 70,
-                    left: 1,
-                    right: 50,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 20, right: 20),
-                      child: Text(
-                        "1. You can leave feedback for sellers within 30 days in “Orders awaiting my feedback”",
-                        style: TextStyle(fontSize: 14),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Shipping()));
+                },
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.asset(
+                        "assets/images/pills.png",
                       ),
                     ),
-                  ),
-                  const Positioned(
-                    top: 120,
-                    left: 1,
-                    right: 50,
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 20, right: 20),
-                      child: Text(
-                        "2. Feedbacks will be published when both you and the seller have left feedback, or at the end of 30 days",
-                        style: TextStyle(fontSize: 14),
+                    Positioned(
+                      top: 30,
+                      left: 20,
+                      right: 50,
+                      child: Row(
+                        children: const [
+                          Icon(
+                            Icons.light_mode,
+                            color: Colors.red,
+                          ),
+                          SizedBox(width: 10),
+                          Text(
+                            "Guidelines",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 17),
+                          ),
+                        ],
                       ),
                     ),
-                  )
-                ],
+                    const Positioned(
+                      top: 70,
+                      left: 1,
+                      right: 50,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        child: Text(
+                          "1. You can leave feedback for sellers within 30 days in “Orders awaiting my feedback”",
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ),
+                    ),
+                    const Positioned(
+                      top: 120,
+                      left: 1,
+                      right: 50,
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        child: Text(
+                          "2. Feedbacks will be published when both you and the seller have left feedback, or at the end of 30 days",
+                          style: TextStyle(fontSize: 14),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             const SizedBox(

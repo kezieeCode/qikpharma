@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qikpharma/views/new_address.dart';
 
 class Shipping extends StatefulWidget {
   const Shipping({Key? key}) : super(key: key);
@@ -50,13 +51,18 @@ class _ShippingState extends State<Shipping> {
               const SizedBox(height: 150),
               Padding(
                 padding: const EdgeInsets.only(left: 30, right: 30),
-                child: Container(
+                child: SizedBox(
                   height: 60,
                   child: Material(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(30),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const NewAdress()));
+                      },
                       child: const Text(
                         "Add a new address",
                         style: TextStyle(color: Colors.white, fontSize: 20),

@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:qikpharma/views/user_information.dart';
 
 class NewAdress extends StatefulWidget {
   const NewAdress({Key? key}) : super(key: key);
@@ -558,7 +559,13 @@ class _NewAdressState extends State<NewAdress> {
                     height: 50,
                     width: 150,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const PersonalInformation()));
+                      },
                       child: const Text('Save'),
                       color: Colors.green,
                       textColor: Colors.white,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qikpharma/views/feedbacks.dart';
 import 'package:qikpharma/views/notification.dart';
+import 'package:qikpharma/views/personal_setting.dart';
 
 class ProfileList extends StatelessWidget {
   const ProfileList({Key? key}) : super(key: key);
@@ -94,18 +95,26 @@ class ProfileList extends StatelessWidget {
           indent: 50,
           thickness: 1.4,
         ),
-        const ListTile(
-          leading: Icon(
-            Icons.settings,
-            color: Color.fromARGB(255, 130, 203, 132),
-          ),
-          title: Text(
-            "Settings",
-            style: TextStyle(fontSize: 20, color: Colors.grey),
-          ),
-          trailing: Icon(
-            Icons.arrow_forward_ios,
-            color: Color.fromARGB(255, 130, 203, 132),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const PersonalSettings()));
+          },
+          child: const ListTile(
+            leading: Icon(
+              Icons.settings,
+              color: Color.fromARGB(255, 130, 203, 132),
+            ),
+            title: Text(
+              "Settings",
+              style: TextStyle(fontSize: 20, color: Colors.grey),
+            ),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              color: Color.fromARGB(255, 130, 203, 132),
+            ),
           ),
         ),
         const Divider(

@@ -54,7 +54,7 @@ class _SettingComponentState extends State<SettingComponent> {
         ),
         const ListTile(
           leading: Icon(
-            Icons.person,
+            Icons.account_box_rounded,
             color: Colors.green,
           ),
           title: Text("Personal Information"),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:qikpharma/views/component/2-fa_auth.dart';
+import 'package:qikpharma/views/component/security_component.dart';
 
 class Security extends StatefulWidget {
   const Security({Key? key}) : super(key: key);
@@ -28,6 +30,16 @@ class _SecurityState extends State<Security> {
               color: Colors.black,
             )),
       ),
+      body: ListView(children: const [
+        SizedBox(
+          height: 12,
+        ),
+        SecurityComponent(),
+        SizedBox(
+          height: 20,
+        ),
+        TwoFactorAuth()
+      ]),
     );
   }
 }

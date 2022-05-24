@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qikpharma/views/change_password.dart';
 
 class SecurityComponent extends StatefulWidget {
   const SecurityComponent({Key? key}) : super(key: key);
@@ -49,12 +50,17 @@ class _SecurityComponentState extends State<SecurityComponent> {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text(
+              children: [
+                const Text(
                   "Password",
                   style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 ),
-                Icon(Icons.edit)
+                InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ChangePassword())),
+                    child: const Icon(Icons.edit))
               ],
             ),
           ),

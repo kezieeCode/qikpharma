@@ -118,7 +118,7 @@ class _FeedbacksState extends State<Feedbacks> {
                   decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                            color: Color.fromARGB(255, 216, 214, 214),
+                            color: const Color.fromARGB(255, 216, 214, 214),
                             blurRadius: 10,
                             offset: Offset.fromDirection(1),
                             blurStyle: BlurStyle.outer)
